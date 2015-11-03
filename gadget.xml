@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gadget>
+  <name>Uspace</name>
+  <version>1.0.0.0</version>
+  <description>Uspace Sidebar</description>
+  <hosts>
+    <host name="sidebar">
+      <base type="HTML" apiVersion="1.0.0" src="gadget.html" />
+      <permissions>Full</permissions>
+      <platform minPlatformVersion="1.0" />
+	  <defaultImage src="images/uspace.png" />
+    </host>
+  </hosts>
+</gadget>
