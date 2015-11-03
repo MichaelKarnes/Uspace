@@ -21,4 +21,5 @@ for cpu information, use the All_CPU_Meter.gadget file in the gadget pack as an 
 not sure on how to change the background from the settings UI/js files it should be possible though.
 
 **NOTE** I recommend all of us using the github desktop app so that we can make local repositories 
-within the gadget folder. Will make synchronization easier.
+within the gadget folder. Will make synchronization easier. We also need to rename the repository 
+to Uspace.gadget since this is the filename that windows gadget recognizes.
