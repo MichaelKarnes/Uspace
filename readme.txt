@@ -4,7 +4,7 @@ locate the gadget folder under your local disk running your OS:
 *change your Users name*
 C:\Users\Brad\AppData\Local\Microsoft\Windows Sidebar\Gadgets
 
-copy the Uspace.gadget folder in github to this directory
+clone the Uspace.gadget folder in github to this directory
 
 right click on the desk top, and click gadgets
 
