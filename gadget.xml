@@ -1,14 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <gadget>
   <name>Uspace</name>
-  <version>1.0.0.0</version>
-  <description>Uspace Sidebar</description>
+  <namespace>11. Weather</namespace>
+  <version>1.4</version>
+  <author name="gersma">
+    <info url="http://gersma.deviantart.com/" text="my gallery" />
+    <logo src="logo.png" />
+  </author>
+  <copyright>© 2010</copyright>
+  <description>Weatherforecast for the days to come.</description>
+  <icons>
+    <icon height="100" width="100" src="icon.png" />
+  </icons>
   <hosts>
     <host name="sidebar">
       <base type="HTML" apiVersion="1.0.0" src="gadget.html" />
-      <permissions>Full</permissions>
+      <permissions>full</permissions>
       <platform minPlatformVersion="1.0" />
-	  <defaultImage src="images/uspace.png" />
+      <defaultImage src="drag.png" />
+      <autoscaleDPI>true</autoscaleDPI>
     </host>
   </hosts>
 </gadget>
