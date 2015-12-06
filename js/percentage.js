@@ -55,7 +55,6 @@ function refreshPercent(autoreload) {
     console.log('    font: ' + font);
     console.log('    color: ' + color);
     console.log('    opacity: ' + opacity);
-	toCPUPercent.value = '10%';
 	
     var mini = 0;
     var maxCPU = System.Machine.CPUs.count;
@@ -65,15 +64,16 @@ function refreshPercent(autoreload) {
         tempCPU += System.Machine.CPUs.item(i).usagePercentage;
     }
 	
-	
-	collCPUs = System.Machine.CPUs;
+	//test
+	/*collCPUs = System.Machine.CPUs;
 
     // Report the folder details.
     for (var loop = 0; loop < collCPUs.count; loop++)
     {
         oCPU = collCPUs.item(loop);
         toMemPercent.value += loop + ': ' + oCPU.usagePercentage + ' ';
-    }  
+    }  */
+	
 	
 	toCPUPercent.value = '30%';
     var maxMem = System.Machine.totalMemory;
