@@ -64,6 +64,10 @@ function refreshPercent(autoreload) {
         tempCPU += System.Machine.CPUs.item(i).usagePercentage;
     }
 	
+	if(tempCPU == 0){
+		tempCPU = 1;
+	}
+	
 	//test
 	/*collCPUs = System.Machine.CPUs;
 
@@ -98,8 +102,16 @@ function refreshPercent(autoreload) {
     toCPUPercent.color = color;
     toCPUPercent.opacity = opacity;
 
-    toCPUPercent.left = targetWidth - toTime.width;
+    toCPUPercent.left = targetWidth - toCPUPercent.width;
     toCPUPercent.top = 0;
+	
+	toMemPercent.value = memPercent;
+	toMemPercent.font = font;
+	toMemPercent.color = color;
+	toMemPercent.opacity = opacity;
+	
+	toMemPercent.left = targetWidth - toMemPercent.width;
+	toMemPercent.top = 0;
 
     if (autoreload) {
         setTimeout(function () { refreshPercent(true); }, 60 * 1000);
