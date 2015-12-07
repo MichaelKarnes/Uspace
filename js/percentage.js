@@ -41,8 +41,8 @@ function createPercentTextObjects() {
     background.removeObjects();
 
     // 0's are dummy chars for initial text object alignment
-    toCPUPercent = background.addTextObject('000% CPU', font, 20, color, 0, 0);
-    toMemPercent = background.addTextObject('000% RAM', font, 20, color, toCPUPercent.left, 0); //(toTime.top+toTime.height)*0.69);
+    toCPUPercent = background.addTextObject('000% CPU', font, 25, color, 0, 0);
+    toMemPercent = background.addTextObject('000% RAM', font, 25, color, toCPUPercent.left, 0); //(toTime.top+toTime.height)*0.69);
 
     targetWidth = document.getElementsByTagName('body')[0].style.width = toCPUPercent.width;
     targetHeight = document.getElementsByTagName('body')[0].style.height = toMemPercent.height + toCPUPercent.height;
@@ -106,7 +106,7 @@ function refreshPercent(autoreload) {
     toCPUPercent.opacity = opacity;
 
     toCPUPercent.left = targetWidth - toCPUPercent.width - 3;
-    toCPUPercent.top = 17;
+    toCPUPercent.top = 20;
 	
 	toMemPercent.value = Math.round(oMachine.memoryPercentage) + "% RAM";
 	toMemPercent.font = font;
