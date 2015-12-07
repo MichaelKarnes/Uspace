@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Gadget</title>
+	<script language="javascript" src='js/console.log.js'></script>
+	<script language="javascript" src='js/localization.js'></script>
+	<script language="javascript" src='js/clockgadget.js'></script>
+	<script language="javascript" src='js/percentage.js'></script>
+	<link href="css/gadget.css" rel="stylesheet" type="text/css" />
+	<script language="javascript" src="js/gadget.js" type="text/javascript"></script>
+	<script language="javascript" src="js/gadgetdata.js" type="text/javascript"></script>
+
+</head>
+<body onload="init();">
+	<g:background id="background" src="background.png">
+		<div id="home">
+				<img src="images/icons/clock.png" width="20" onclick="change_app('clock');" />
+				<img src="images/icons/facebook.png" width="20" onclick="change_app('facebook');" />
+				<img src="images/icons/twitter.png" width="20" onclick="change_app('twitter');" />
+				<img src="images/icons/calculator.png" width="20" onclick="change_app('calculator');" />
+				<img src="images/icons/percentage.png" width="20" onclick="change_app('percentage');" />
+		</div>
+		
+		<div id="clock" onload='clockinit();'>
+
+		</div>
+		
+		<div id="facebook">
+			<img src="images/icons/home.png" width="20" onclick="change_app('home');" />Facebook
+		</div>
+		<div id="twitter">
+			<img src="images/icons/home.png" width="20" onclick="change_app('home');" />Twitter
+			<iframe  height="400"  width="300" src="http://feed.mikle.com/widget/?rssmikle_url=https%3A%2F%2Ftwitrss.me%2Ftwitter_user_to_rss%2F%3Fuser%3Dpewdiepie&rssmikle_frame_width=300&rssmikle_frame_height=400&frame_height_by_article=0&rssmikle_target=_blank&rssmikle_font=Arial%2C%20Helvetica%2C%20sans-serif&rssmikle_font_size=12&rssmikle_border=off&responsive=off&text_align=left&text_align2=left&corner=off&scrollbar=on&autoscroll=on&scrolldirection=up&scrollstep=3&mcspeed=20&sort=Off&rssmikle_title=on&rssmikle_title_bgcolor=%230066FF&rssmikle_title_color=%23FFFFFF&rssmikle_item_bgcolor=%23FFFFFF&rssmikle_item_title_length=55&rssmikle_item_title_color=%230066FF&rssmikle_item_border_bottom=on&rssmikle_item_description=on&item_link=off&rssmikle_item_description_length=150&rssmikle_item_description_color=%23666666&rssmikle_item_date=gl1&rssmikle_timezone=Etc%2FGMT&datetime_format=%25b%20%25e%2C%20%25Y%20%25l%3A%25M%20%25p&item_description_style=text%2Btn&item_thumbnail=full&item_thumbnail_selection=auto&article_num=15&rssmikle_item_podcast=off&" scrolling="no" name="rssmikle_frame" marginwidth="0" marginheight="0" vspace="0" hspace="0" frameborder="0"></iframe>
+		</div>
+		<div id="calculator">
+			<img src="images/icons/home.png" width="20" onclick="change_app('home');" />
+			<input id="calc-answer" type="text" value="21" style="width: 120px; margin-left: 5px; box-sizing: border-box;" disabled />
+			<div class="calc-row" style="margin-left: 5px; margin-top: 5px; text-align: center;">
+				<button style="width: 25px; height: 20px; margin-right: 5px;">(</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">)</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">C</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">←</button>
+			</div>
+			<div class="calc-row" style="margin-left: 5px; margin-top: 5px; text-align: center;">
+				<button style="width: 25px; height: 20px; margin-right: 5px;">7</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">8</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">9</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">÷</button>
+			</div>
+			<div class="calc-row" style="margin-left: 5px; margin-top: 5px; text-align: center;">
+				<button style="width: 25px; height: 20px; margin-right: 5px;">4</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">5</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">6</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">x</button>
+			</div>
+			<div class="calc-row" style="margin-left: 5px; margin-top: 5px; text-align: center;">
+				<button style="width: 25px; height: 20px; margin-right: 5px;">1</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">2</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">3</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">-</button>
+			</div>
+			<div class="calc-row" style="margin-left: 5px; margin-top: 5px; text-align: center;">
+				<button style="width: 25px; height: 20px; margin-right: 5px;">0</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">.</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">=</button>
+				<button style="width: 25px; height: 20px; margin-right: 5px;">+</button>
+			</div>
+		</div>
+		<div id="percentage"></div>
+	</g:background>
+</body>
+</html>
