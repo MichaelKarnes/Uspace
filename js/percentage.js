@@ -84,7 +84,7 @@ function refreshPercent(autoreload) {
 	toCPUPercent.value = '31%';
     var availMem = System.Machine.availableMemory;
 	toCPUPercent.value = '32%';
-    var CPUPercent = Math.min(Math.max(0, tempCPU/MaxCPU), 100);
+    var CPUPercent = Math.min(Math.max(0, tempCPU/maxCPU), 100);
 	toCPUPercent.value = '33%';
     var memPercent;
 	toCPUPercent.value = '40%';
