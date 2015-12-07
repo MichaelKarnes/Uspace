@@ -24,8 +24,8 @@ function readPercentSettings() {
     console.log('[readSettings]');
 
     font = System.Gadget.Settings.readString('font') || 'Arial';
-    color = System.Gadget.Settings.readString('color') || 'white';
-    opacity = System.Gadget.Settings.read('opacity') || 30;
+    color = System.Gadget.Settings.readString('color') || 'blueviolet';
+    opacity = System.Gadget.Settings.read('opacity') || 70;
     // negativeVerticalMargin = System.Gadget.Settings.read('negativeVerticalMargin') || 0;
     // negativeHorizontalMargin = System.Gadget.Settings.read('negativeHorizontalMargin') || 0;
 
@@ -41,8 +41,8 @@ function createPercentTextObjects() {
     background.removeObjects();
 
     // 0's are dummy chars for initial text object alignment
-    toCPUPercent = background.addTextObject('000%', font, 105, color, 0, 0);
-    toMemPercent = background.addTextObject('000%', font, 20, color, toCPUPercent.left, 90); //(toTime.top+toTime.height)*0.69);
+    toCPUPercent = background.addTextObject('000% CPU', font, 25, color, 0, 0);
+    toMemPercent = background.addTextObject('000% RAM', font, 25, color, toCPUPercent.left, 0); //(toTime.top+toTime.height)*0.69);
 
     targetWidth = document.getElementsByTagName('body')[0].style.width = toCPUPercent.width;
     targetHeight = document.getElementsByTagName('body')[0].style.height = toMemPercent.height + toCPUPercent.height;
@@ -100,15 +100,15 @@ function refreshPercent(autoreload) {
 		toCPUPercent.value = '60%';
     }*/
 
-    toCPUPercent.value = Math.round(oMachine.CPUUsagePercentage);
+    toCPUPercent.value = Math.round(oMachine.CPUUsagePercentage) + "% CPU";
     toCPUPercent.font = font;
     toCPUPercent.color = color;
     toCPUPercent.opacity = opacity;
 
-    toCPUPercent.left = targetWidth - toCPUPercent.width;
-    toCPUPercent.top = 0;
+    toCPUPercent.left = targetWidth - toCPUPercent.width - 3;
+    toCPUPercent.top = 20;
 	
-	toMemPercent.value = Math.round(oMachine.memoryPercentage);
+	toMemPercent.value = Math.round(oMachine.memoryPercentage) + "% RAM";
 	toMemPercent.font = font;
 	toMemPercent.color = color;
 	toMemPercent.opacity = opacity;

@@ -9,7 +9,7 @@ var colorPicker = {
 	fillYield: 50,	// Yield back to IE every X ms
 
 	colortypeIndex: 135,
-	currentColor: 'white',
+	currentColor: 'blueviolet',
 	selectingColor: -1,
 
 	init: function() {
