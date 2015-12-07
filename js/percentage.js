@@ -24,8 +24,8 @@ function readPercentSettings() {
     console.log('[readSettings]');
 
     font = System.Gadget.Settings.readString('font') || 'Arial';
-    color = System.Gadget.Settings.readString('color') || 'white';
-    opacity = System.Gadget.Settings.read('opacity') || 30;
+    color = System.Gadget.Settings.readString('color') || 'blueviolet';
+    opacity = System.Gadget.Settings.read('opacity') || 70;
     // negativeVerticalMargin = System.Gadget.Settings.read('negativeVerticalMargin') || 0;
     // negativeHorizontalMargin = System.Gadget.Settings.read('negativeHorizontalMargin') || 0;
 
