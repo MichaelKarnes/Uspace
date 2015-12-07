@@ -10,8 +10,8 @@ function calculatorinit() {
 	calcstr = "";
 	
 	font = System.Gadget.Settings.readString('font') || 'Arial';
-	color = System.Gadget.Settings.readString('color') || 'white';
-	opacity = System.Gadget.Settings.read('opacity') || 30;
+	color = System.Gadget.Settings.readString('color') || 'blueviolet';
+	opacity = System.Gadget.Settings.read('opacity') || 70;
 	
 	var background = document.getElementById('background');
 	background.removeObjects();

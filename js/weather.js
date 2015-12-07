@@ -8,8 +8,8 @@ function weatherinit() {
 	http_request = new ActiveXObject("MSXML2.XMLHTTP");
 	
 	font = System.Gadget.Settings.readString('font') || 'Arial';
-	color = System.Gadget.Settings.readString('color') || 'white';
-	opacity = System.Gadget.Settings.read('opacity') || 30;
+	color = System.Gadget.Settings.readString('color') || 'blueviolet';
+	opacity = System.Gadget.Settings.read('opacity') || 70;
 	
 	http_request.onreadystatechange = function(){
 		if (http_request.readyState == 4  ){
