@@ -18,8 +18,10 @@ function weatherinit() {
 			var background = document.getElementById('background');
 			background.removeObjects();
 
-			background.addTextObject(Math.round(jsonObj.current_observation.temp_f)+'°F', font, 25, color, 0, 12);
-			background.addTextObject('Feels Like '+Math.round(jsonObj.current_observation.feelslike_f)+'°F', font, 9, color, 0, 41);
+			var one = background.addTextObject(Math.round(jsonObj.current_observation.temp_f)+'°F', font, 25, color, 0, 12);
+			var two = background.addTextObject('Feels Like '+Math.round(jsonObj.current_observation.feelslike_f)+'°F', font, 9, color, 0, 41);
+			one.opacity = opacity;
+			two.opacity = opacity;
 			background.addImageObject('images/icons/'+getIcon(jsonObj.current_observation.icon)+'.png', 80, 7);
 	   }
 	}
